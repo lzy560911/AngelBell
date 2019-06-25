@@ -1,0 +1,9 @@
+server:
+  port: 8090
+  context-path: /angelbell
+
+spring:
+    mvc:
+      view:
+        prefix: /WEB-INF/views/
+        suffix: .jsp
