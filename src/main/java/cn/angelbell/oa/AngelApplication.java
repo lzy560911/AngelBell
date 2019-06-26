@@ -1,25 +1,37 @@
-package cn.angelbell.oa.config;
+package cn.angelbell.oa;
 
 import java.sql.SQLException;
+import java.util.HashMap;
+import java.util.Map;
 
 import javax.sql.DataSource;
 
-import org.apache.log4j.Level;
-import org.apache.log4j.Logger;
+import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.boot.web.servlet.FilterRegistrationBean;
+import org.springframework.boot.web.servlet.ServletRegistrationBean;
 import org.springframework.context.annotation.Bean;
-import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Primary;
 import org.springframework.context.annotation.PropertySource;
 
 import com.alibaba.druid.pool.DruidDataSource;
+import com.alibaba.druid.support.http.StatViewServlet;
+import com.alibaba.druid.support.http.WebStatFilter;
 
-@Configuration
+/**
+ * 
+ * @ClassName: AngelApplication
+ * @Description: springboot入口
+ * @author liziye
+ * @date 2010.06.26
+ */
+@SpringBootApplication
 @PropertySource(value = { "classpath:jdbc.properties" })
-public class DruidDBConfig {
-    private Logger logger = Logger.getLogger(DruidDBConfig.class);
-
-    @Value("${spring.datasource.url}")
+@MapperScan("cn.angelbell.oa.mapper")//扫描数据访问接口
+public class AngelApplication {
+	@Value("${spring.datasource.url}")
     private String dbUrl;
 
     @Value("${spring.datasource.username}")
@@ -73,8 +85,8 @@ public class DruidDBConfig {
     @Value("{spring.datasource.connectionProperties}")
     private String connectionProperties;
 
-    @Bean     //声明其为Bean实例
-    @Primary  //在同样的DataSource中，首先使用被标注的DataSource
+    @Bean // 声明其为Bean实例
+    @Primary // 在同样的DataSource中，首先使用被标注的DataSource
     public DataSource dataSource() {
         DruidDataSource datasource = new DruidDataSource();
 
@@ -83,7 +95,7 @@ public class DruidDBConfig {
         datasource.setPassword(password);
         datasource.setDriverClassName(driverClassName);
 
-        //configuration
+        // configuration
         datasource.setInitialSize(initialSize);
         datasource.setMinIdle(minIdle);
         datasource.setMaxActive(maxActive);
@@ -99,10 +111,38 @@ public class DruidDBConfig {
         try {
             datasource.setFilters(filters);
         } catch (SQLException e) {
-            logger.log(Level.ERROR, "druid configuration initialization filter : {0}", e);
+            e.printStackTrace();
         }
         datasource.setConnectionProperties(connectionProperties);
-
         return datasource;
+    }
+
+    @Bean
+    public ServletRegistrationBean druidServlet() {
+        ServletRegistrationBean servletRegistrationBean = new ServletRegistrationBean();
+        servletRegistrationBean.setServlet(new StatViewServlet());
+        servletRegistrationBean.addUrlMappings("/druid/*");
+        Map<String, String> initParameters = new HashMap<String, String>();
+        initParameters.put("loginUsername", "admin");// 用户名
+        initParameters.put("loginPassword", "admin");// 密码
+        initParameters.put("resetEnable", "false");// 禁用HTML页面上的“Reset All”功能
+        initParameters.put("allow", ""); // IP白名单 (没有配置或者为空，则允许所有访问)
+        // initParameters.put("deny", "192.168.20.38");// IP黑名单
+        // (存在共同时，deny优先于allow)
+        servletRegistrationBean.setInitParameters(initParameters);
+        return servletRegistrationBean;
+    }
+    @Bean
+    public FilterRegistrationBean filterRegistrationBean() {
+        FilterRegistrationBean filterRegistrationBean = new FilterRegistrationBean();
+        filterRegistrationBean.setFilter(new WebStatFilter());
+        filterRegistrationBean.addUrlPatterns("/*");
+        filterRegistrationBean.addInitParameter("exclusions", "*.js,*.gif,*.jpg,*.png,*.css,*.ico,/druid/*");
+        return filterRegistrationBean;
+    }
+
+
+    public static void main(String[] args) {
+        SpringApplication.run(AngelApplication.class);
     }
 }
