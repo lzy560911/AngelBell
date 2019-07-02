@@ -99,7 +99,8 @@ public class GoodsTypeServiceImpl implements GoodsTypeService {
      */
     @Override
     public List<GoodsType> getGoodsTypeList() throws Exception {
-        return typeDao.getList();
+    	List<GoodsType> list=typeDao.getList();
+        return list;
 
     }
 

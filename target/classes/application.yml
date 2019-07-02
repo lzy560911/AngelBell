@@ -1,6 +1,6 @@
 server:
-  port: 8090
-  context-path: /angelbell
+  port: 8080
+  context-path: /
 
 spring:
     mvc:
@@ -18,5 +18,19 @@ mybatis:
 pagehelper:
   helper-dialect: mysql
   reasonable: true
-  support-methods-arguments: true
+  support-methods-arguments: !!str true
   params: count=countSql
+  
+# 日志配置
+debug: true
+
+# 日志配置
+logging:
+  file: log/AhutOne.log
+  level:
+    # com.ahut包下所有class以DEBUG级别输出
+    cn.angelbell.oa: DEBUG
+    # root日志以WARN级别输出
+    root: WARN
+    org.springframework.boot.autoconfigure: ERROR
+  config: classpath:logback-spring.xml

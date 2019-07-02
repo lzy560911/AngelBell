@@ -9,12 +9,13 @@ import org.springframework.web.bind.annotation.RestController;
 import cn.angelbell.oa.entity.GoodsType;
 import cn.angelbell.oa.service.GoodsTypeService;
 
+
 /**
  * 
  * @ClassName: GoodsTypeAction
  * @Description: 商品类型控制层
- * @author liziye
- * @date 2019.06.26
+ * @author cheng
+ * @date 2017年7月17日 上午11:09:47
  */
 @RestController // 等价于@Controller+@ResponseBody
 public class GoodsTypeAction {
@@ -33,12 +34,6 @@ public class GoodsTypeAction {
     public List<GoodsType> getGoodsTypeList(int pageNum, int pageSize) throws Exception {
         // 调用业务逻辑,返回数据
         return typeService.getList(pageNum,pageSize);
-    }
-
-    @RequestMapping(value="/getByTypeName")
-    public GoodsType getByTypeName(String typeName) throws Exception{
-        typeName = "生活用品";
-        return typeService.getByTypeName(typeName);
     }
 
 }

@@ -1,6 +1,9 @@
 package cn.angelbell.oa.service;
 
 import java.util.List;
+
+import org.springframework.stereotype.Service;
+
 import cn.angelbell.oa.entity.GoodsType;
 
 /**
@@ -10,6 +13,7 @@ import cn.angelbell.oa.entity.GoodsType;
  * @author liziye
  * @date 2019.06.26
  */
+@Service
 public interface GoodsTypeService {
 
     /**

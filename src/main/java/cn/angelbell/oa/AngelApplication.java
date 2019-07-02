@@ -145,4 +145,22 @@ public class AngelApplication {
     public static void main(String[] args) {
         SpringApplication.run(AngelApplication.class);
     }
+    
+    /*
+    @GetMapping(value="/xxx")
+       等价于
+    @RequestMapping(value = "/xxx",method = RequestMethod.GET)
+
+    @PostMapping(value="/xxx")
+       等价于
+    @RequestMapping(value = "/xxx",method = RequestMethod.POST)
+
+    @PutMapping(value="/xxx")
+       等价于
+    @RequestMapping(value = "/xxx",method = RequestMethod.PUT)
+
+    @DeleteMapping(value="/xxx")
+       等价于
+    @RequestMapping(value = "/xxx",method = RequestMethod.DELETE)
+    */
 }
