@@ -5,7 +5,11 @@ server:
 spring:
     mvc:
       view:
-        prefix: /WEB-INF/views/
+        prefix: classpath:/templates/
+        suffix: .jsp
+    thymeleaf:
+        cache: false
+        prefix: classpath:/templates/
         suffix: .jsp
 
 # 与mybatis整合
