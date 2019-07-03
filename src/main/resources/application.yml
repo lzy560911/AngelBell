@@ -11,6 +11,12 @@ spring:
         cache: false
         prefix: classpath:/templates/
         suffix: .jsp
+    devtools:
+        restart:
+           exclude: META-INF/maven/**,META-INF/resources/**,resources/**,static/**,public/**,templates/**,**/*Test.class,**/*Tests.class,git.properties
+    cache:
+        ehcache:
+           config: classpath:ehcache.xml
 
 # 与mybatis整合
 mybatis:
