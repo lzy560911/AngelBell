@@ -12,6 +12,7 @@ import org.apache.shiro.authc.IncorrectCredentialsException;
 import org.apache.shiro.authc.LockedAccountException;
 import org.apache.shiro.authc.UnknownAccountException;
 import org.apache.shiro.authc.UsernamePasswordToken;
+import org.apache.shiro.crypto.hash.SimpleHash;
 import org.apache.shiro.subject.Subject;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -24,6 +25,7 @@ import org.springframework.web.bind.annotation.RestController;
  * @date 2017年10月10日 上午10:18:21
  */
 @RestController
+@RequestMapping(value = "/shiro")
 public class ShiroAction {
 
     /**
@@ -44,9 +46,13 @@ public class ShiroAction {
         // SecurityUtils.setSecurityManager(securityManager);
 
         System.out.println(username + ":" + password);
+        String passwd1 = new SimpleHash("SHA-1", username,password).toString();	//密码加密
+        String passwd2 = new SimpleHash("MD5", username,password).toString();	//密码加密
+        System.out.println(passwd1+"::"+passwd2);
         Subject subject = SecurityUtils.getSubject();
         // 自己创建一个令牌，输入用户名和密码
         UsernamePasswordToken usernamePasswordToken = new UsernamePasswordToken(username, password);
+        System.out.println("usernamePasswordToken is ---->"+usernamePasswordToken);
         try {
             subject.login(usernamePasswordToken);
             System.out.println("身份认证成功！");

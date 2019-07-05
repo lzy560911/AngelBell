@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Amaze UI Admin index Examples</title>
-  <meta name="description" content="这是一个 index 页面">
+  <title>AngelBell Office Automation</title>
+  <meta name="description" content="AngelBell Office Automation">
   <meta name="keywords" content="index">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="renderer" content="webkit">
@@ -15,9 +15,11 @@
   <script src="/static/assets/js/jquery.min.js"></script>
   <script src="/static/assets/js/amazeui.min.js"></script>
   <script src="/static/assets/js/app.js"></script>
+  <script src="/static/assets/js/layui.js"></script>
   <link rel="stylesheet" href="/static/assets/css/amazeui.min.css" />
   <link rel="stylesheet" href="/static/assets/css/admin.css">
   <link rel="stylesheet" href="/static/assets/css/app.css">
+
 </head>
 
 <body data-type="login">
@@ -35,20 +37,44 @@
 			<i>Log In </i> or <span> Sign Up</span>
 		</div>
 		<div class="am-u-sm-10 login-am-center">
-			<form class="am-form">
+			<form class="am-form" method="post" id="login-form-hooks">
 				<fieldset>
 					<div class="am-form-group">
-						<input type="email" class="" id="doc-ipt-email-1" placeholder="输入电子邮件">
+						<input name="username" type="text" class="" id="doc-ipt-email-1" placeholder="请输入用户名">
 					</div>
 					<div class="am-form-group">
-						<input type="password" class="" id="doc-ipt-pwd-1" placeholder="设置个密码吧">
+						<input name="password" type="password" class="" id="doc-ipt-pwd-1" placeholder="请输入密码">
 					</div>
-					<p><button type="submit" class="am-btn am-btn-default">登录</button></p>
+					<p><button type="submit" lay-submit lay-filter="login" class="am-btn am-btn-default">登录</button></p>
 				</fieldset>
 			</form>
 		</div>
 	</div>
 </div>
+    <script>
+        $(function  () {
+            layui.use('form', function(){
+              var form = layui.form;
+              // layer.msg('玩命卖萌中', function(){
+              //   //关闭后的操作
+              //   });
+              //监听提交
+              form.on('submit(login)', function(data){
+              	alert("this is the from !");
+                $.post('/login/doLogin', $('#login-form-hooks').serialize(), function(o){
+                	alert("come in !");
+					if(o.result == "01") {
+						window.location.href = o.url;
+					} else {
+						layer.msg(data.msg);
+					}
+					$('.refcaptcha').click();
+				}, 'json');
+                return false;
+              });
+            });
+        })
+    </script>
 
 </body>
 

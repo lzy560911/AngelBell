@@ -1,0 +1,3 @@
+2019-07-04 17:53:38.225 logback [File Watcher] DEBUG o.s.boot.devtools.restart.Restarter - Restarting application
+2019-07-04 17:53:38.226 logback [Thread-6] DEBUG o.s.boot.devtools.restart.Restarter - Stopping application
+2019-07-04 17:53:38.227 logback [Thread-6] INFO  o.s.b.c.e.AnnotationConfigEmbeddedWebApplicationContext - Closing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@14e8a48: startup date [Thu Jul 04 17:49:40 CST 2019]; root of context hierarchy
