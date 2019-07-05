@@ -84,12 +84,12 @@ public class ShiroConfig {
         // 对静态资源设置匿名访问
         // anon:所有url都都可以匿名访问
         filterChainDefinitionMap.put("/static/**", "anon");
-        filterChainDefinitionMap.put("/login/**", "anon");
+        filterChainDefinitionMap.put("/login/doLogin", "anon");
         filterChainDefinitionMap.put("/shiro/**", "anon");
         // 配置退出 过滤器,其中的具体的退出代码Shiro已经替我们实现了
         filterChainDefinitionMap.put("/logout", "logout");
         // authc:所有url都必须认证通过才可以访问
-        //filterChainDefinitionMap.put("/**", "authc");
+        filterChainDefinitionMap.put("/**", "authc");
         shiroFilterFactoryBean.setFilterChainDefinitionMap(filterChainDefinitionMap);
         return shiroFilterFactoryBean;
     }

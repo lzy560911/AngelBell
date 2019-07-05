@@ -59,28 +59,22 @@ public class LoginController  extends BaseController {
 		
 		PageData pd = new PageData();
 		pd = this.getPageData();
-		System.out.println("1111111");
 		String username = pd.getString("username");
 		String password = pd.getString("password");
-		System.out.println("2222222");
 		if(username!=null&&password!=null){
 			String passwd = new SimpleHash("SHA-1", username,password).toString();	//密码加密
 			System.out.println("passwd is"+ passwd);
 			User user = userService.selectByUserName(username);
 			System.out.println("admin.getPassword() is "+ user.getPassword());
 			Session session = Jurisdiction.getSession();
-		    System.out.println("3333333");
 			if(passwd.equals(user.getPassword())){
-				System.out.println("4444444");
 				session.setAttribute(Const.SESSION_USER, user);
 				session.setAttribute("adminid", user.getUserId());	
 				session.setAttribute("username", user.getUsername());
-				System.out.println("5555555");
 				//shiro加入身份验证
 				Subject subject = SecurityUtils.getSubject(); 
 			    UsernamePasswordToken token = new UsernamePasswordToken(username, password); 
 			    try { 
-			    	System.out.println("6666666");
 			        subject.login(token); 
 			    } catch (AuthenticationException e) { 
 			    	errInfo = "身份验证失败！";
@@ -89,17 +83,14 @@ public class LoginController  extends BaseController {
 			    errInfo = "01"; 				//登录成功
 				msg = "success";
 			}else{
-				System.out.println("7777777");
 				errInfo = "00"; 				//用户名或密码有误
 				msg = "用户名不存在密码错误";
 				logBefore(logger, username+"登录系统密码错误");
 			}
 		}else{
-			System.out.println("99999999");
 			errInfo = "00"; 				//用户名或密码有误
 	    	msg = "用户名密码不能为空!";
 		}
-		System.out.println("0000000");
 		map.put("result", errInfo);
 		map.put("msg", msg);
 		map.put("url", "/login/application.do");

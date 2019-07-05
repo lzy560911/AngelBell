@@ -1,4 +1,0 @@
-2019-07-05 10:52:12.005 logback [http-nio-8080-exec-9] INFO  c.a.oa.controller.LoginController - 
-2019-07-05 10:52:12.006 logback [http-nio-8080-exec-9] INFO  c.a.oa.controller.LoginController - start
-2019-07-05 10:52:12.006 logback [http-nio-8080-exec-9] INFO  c.a.oa.controller.LoginController - 验证登录
-2019-07-05 10:52:13.653 logback [http-nio-8080-exec-5] WARN  o.s.web.servlet.PageNotFound - No mapping found for HTTP request with URI [/user/application.do] in DispatcherServlet with name 'dispatcherServlet'
