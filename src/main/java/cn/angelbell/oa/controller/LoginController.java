@@ -45,6 +45,25 @@ public class LoginController  extends BaseController {
 		ModelAndView mv = this.getModelAndView();
 		return mv;
 	}
+	
+	@RequestMapping(value="/head")
+	public ModelAndView lodeHead() throws Exception{
+		
+		logBefore(logger, "加载头部");
+		ModelAndView mv = this.getModelAndView();
+		mv.setViewName("jsp/head");
+		return mv;
+	}
+	
+	@RequestMapping(value="/welcome")
+	public ModelAndView lodeWelcome() throws Exception{
+		
+		logBefore(logger, "加载头部");
+		ModelAndView mv = this.getModelAndView();
+		mv.setViewName("jsp/welcome");
+		return mv;
+	}
+	
 	/**处理登录
 	 * @throws Exception
 	 */
@@ -63,9 +82,7 @@ public class LoginController  extends BaseController {
 		String password = pd.getString("password");
 		if(username!=null&&password!=null){
 			String passwd = new SimpleHash("SHA-1", username,password).toString();	//密码加密
-			System.out.println("passwd is"+ passwd);
 			User user = userService.selectByUserName(username);
-			System.out.println("admin.getPassword() is "+ user.getPassword());
 			Session session = Jurisdiction.getSession();
 			if(passwd.equals(user.getPassword())){
 				session.setAttribute(Const.SESSION_USER, user);
@@ -73,7 +90,8 @@ public class LoginController  extends BaseController {
 				session.setAttribute("username", user.getUsername());
 				//shiro加入身份验证
 				Subject subject = SecurityUtils.getSubject(); 
-			    UsernamePasswordToken token = new UsernamePasswordToken(username, password); 
+			    UsernamePasswordToken token = new UsernamePasswordToken(username, password);
+			    token.setRememberMe(true);
 			    try { 
 			        subject.login(token); 
 			    } catch (AuthenticationException e) { 
@@ -93,25 +111,28 @@ public class LoginController  extends BaseController {
 		}
 		map.put("result", errInfo);
 		map.put("msg", msg);
-		map.put("url", "/login/application.do");
+		map.put("url", "/login/application");
 		return AppUtil.returnObject(new PageData(), map);
 	}
 	/**访问系统首页
 	 * @param changeMenu：切换菜单参数
 	 * @return
 	 */
-	@RequestMapping(value="/application.do")
+	@RequestMapping(value="/application")
 	public ModelAndView application(){
+		System.out.println("this is the application");
 		ModelAndView mv = this.getModelAndView();
 		PageData pd = new PageData();
 		pd = this.getPageData();
 		try{
 			Session session = Jurisdiction.getSession();
 			User user = (User)session.getAttribute(Const.SESSION_USER);						//读取session中的用户信息(单独用户信息)
-			
+			System.out.println("user session is --->"+user);
 			if (user != null) {
-				mv.setViewName("index");
+				System.out.println("this is index");
+				mv.setViewName("main");
 			}else {
+				System.out.println("this is login");
 				mv.setViewName("login");//session失效后跳转登录页面
 			}
 		} catch(Exception e){

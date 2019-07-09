@@ -73,7 +73,7 @@ public class ShiroConfig {
         // 如果不设置默认会自动寻找Web工程根目录下的"/login.jsp"页面
         shiroFilterFactoryBean.setLoginUrl("/user/userLogin");
         // 登录成功后要跳转的链接,建议不配置,shiro认证成功自动到上一个请求路径
-        shiroFilterFactoryBean.setSuccessUrl("/index");
+        //shiroFilterFactoryBean.setSuccessUrl("/index");
         // 未授权界面,指定没有权限操作时跳转页面
         shiroFilterFactoryBean.setUnauthorizedUrl("/403");
 
@@ -84,8 +84,7 @@ public class ShiroConfig {
         // 对静态资源设置匿名访问
         // anon:所有url都都可以匿名访问
         filterChainDefinitionMap.put("/static/**", "anon");
-        filterChainDefinitionMap.put("/login/doLogin", "anon");
-        filterChainDefinitionMap.put("/shiro/**", "anon");
+        filterChainDefinitionMap.put("/login/**", "anon");
         // 配置退出 过滤器,其中的具体的退出代码Shiro已经替我们实现了
         filterChainDefinitionMap.put("/logout", "logout");
         // authc:所有url都必须认证通过才可以访问

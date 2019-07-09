@@ -1,0 +1,6 @@
+2019-07-09 17:23:21.121 logback [http-nio-8080-exec-8] WARN  o.s.web.servlet.PageNotFound - No mapping found for HTTP request with URI [/login/css/font.css] in DispatcherServlet with name 'dispatcherServlet'
+2019-07-09 17:23:21.123 logback [http-nio-8080-exec-6] WARN  o.s.web.servlet.PageNotFound - No mapping found for HTTP request with URI [/login/css/xadmin.css] in DispatcherServlet with name 'dispatcherServlet'
+2019-07-09 17:23:21.128 logback [http-nio-8080-exec-9] WARN  o.s.web.servlet.PageNotFound - No mapping found for HTTP request with URI [/login/css/xadmin.css] in DispatcherServlet with name 'dispatcherServlet'
+2019-07-09 17:23:21.128 logback [http-nio-8080-exec-1] WARN  o.s.web.servlet.PageNotFound - No mapping found for HTTP request with URI [/login/css/font.css] in DispatcherServlet with name 'dispatcherServlet'
+2019-07-09 17:23:21.131 logback [http-nio-8080-exec-5] WARN  o.s.web.servlet.PageNotFound - No mapping found for HTTP request with URI [/login/css/xadmin.css] in DispatcherServlet with name 'dispatcherServlet'
+2019-07-09 17:23:21.132 logback [http-nio-8080-exec-10] WARN  o.s.web.servlet.PageNotFound - No mapping found for HTTP request with URI [/login/css/font.css] in DispatcherServlet with name 'dispatcherServlet'

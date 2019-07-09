@@ -3,14 +3,14 @@ server:
   context-path: /
 
 spring:
-    mvc:
-      view:
-        prefix: classpath:/templates/
-        suffix: .jsp
     thymeleaf:
         cache: false
         prefix: classpath:/templates/
-        suffix: .jsp
+        suffix: .html
+        check-template: true
+        encoding: UTF-8
+        content-type: text/html; charset=utf-8
+        mode: LEGACYHTML5
     devtools:
         restart:
            exclude: META-INF/maven/**,META-INF/resources/**,resources/**,static/**,public/**,templates/**,**/*Test.class,**/*Tests.class,git.properties

@@ -1,0 +1,6 @@
+2019-07-08 18:06:00.115 logback [http-nio-8080-exec-9] WARN  o.s.web.servlet.PageNotFound - No mapping found for HTTP request with URI [/login/picture-add.html] in DispatcherServlet with name 'dispatcherServlet'
+2019-07-08 18:06:08.534 logback [http-nio-8080-exec-5] INFO  c.a.oa.controller.LoginController - 
+2019-07-08 18:06:08.534 logback [http-nio-8080-exec-5] INFO  c.a.oa.controller.LoginController - start
+2019-07-08 18:06:08.534 logback [http-nio-8080-exec-5] INFO  c.a.oa.controller.LoginController - 加载头部
+2019-07-08 18:06:08.560 logback [http-nio-8080-exec-5] WARN  o.s.web.servlet.PageNotFound - No mapping found for HTTP request with URI [/login/lib/jquery.contextmenu/jquery.contextmenu.r2.js] in DispatcherServlet with name 'dispatcherServlet'
+2019-07-08 18:06:08.598 logback [http-nio-8080-exec-3] WARN  o.s.web.servlet.PageNotFound - No mapping found for HTTP request with URI [/login/lib/jquery.contextmenu/jquery.contextmenu.r2.js] in DispatcherServlet with name 'dispatcherServlet'

@@ -1,0 +1,18 @@
+2019-07-08 18:12:08.564 logback [http-nio-8080-exec-5] INFO  c.a.oa.controller.LoginController - 
+2019-07-08 18:12:08.566 logback [http-nio-8080-exec-5] INFO  c.a.oa.controller.LoginController - start
+2019-07-08 18:12:08.566 logback [http-nio-8080-exec-5] INFO  c.a.oa.controller.LoginController - 验证登录
+2019-07-08 18:12:09.078 logback [http-nio-8080-exec-8] INFO  c.a.oa.controller.LoginController - 
+2019-07-08 18:12:09.078 logback [http-nio-8080-exec-8] INFO  c.a.oa.controller.LoginController - start
+2019-07-08 18:12:09.078 logback [http-nio-8080-exec-8] INFO  c.a.oa.controller.LoginController - 加载头部
+2019-07-08 18:12:36.033 logback [RMI TCP Connection(2)-192.168.1.102] INFO  o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin - Application shutdown requested.
+2019-07-08 18:12:36.034 logback [RMI TCP Connection(2)-192.168.1.102] INFO  o.s.b.c.e.AnnotationConfigEmbeddedWebApplicationContext - Closing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@9b6b55: startup date [Mon Jul 08 18:11:52 CST 2019]; root of context hierarchy
+2019-07-08 18:12:36.437 logback [localhost-startStop-2] INFO  c.a.oa.filter.KeywordHandleFilter - KeywordHandleFilter銷毀
+2019-07-08 18:12:59.408 logback [restartedMain] DEBUG o.s.b.l.ClasspathLoggingApplicationListener - Application started with classpath: [file:/D:/myeclipse_2017/myeclipse_code/oa/target/classes/]
+2019-07-08 18:12:59.489 logback [restartedMain] INFO  cn.angelbell.oa.AngelApplication - Starting AngelApplication on LAPTOP-A9H06692 with PID 16044 (D:\myeclipse_2017\myeclipse_code\oa\target\classes started by lenovo in D:\myeclipse_2017\myeclipse_code\oa)
+2019-07-08 18:12:59.490 logback [restartedMain] DEBUG cn.angelbell.oa.AngelApplication - Running with Spring Boot v1.5.6.RELEASE, Spring v4.3.10.RELEASE
+2019-07-08 18:12:59.490 logback [restartedMain] INFO  cn.angelbell.oa.AngelApplication - No active profile set, falling back to default profiles: default
+2019-07-08 18:12:59.490 logback [restartedMain] DEBUG o.s.boot.SpringApplication - Loading source class cn.angelbell.oa.AngelApplication
+2019-07-08 18:12:59.649 logback [restartedMain] DEBUG o.s.b.c.c.ConfigFileApplicationListener - Loaded config file 'file:/D:/myeclipse_2017/myeclipse_code/oa/target/classes/application.yml' (classpath:/application.yml)
+2019-07-08 18:12:59.650 logback [restartedMain] DEBUG o.s.b.c.c.ConfigFileApplicationListener - Skipped (empty) config file 'file:/D:/myeclipse_2017/myeclipse_code/oa/target/classes/application.yml' (classpath:/application.yml) for profile default
+2019-07-08 18:12:59.650 logback [restartedMain] INFO  o.s.b.c.e.AnnotationConfigEmbeddedWebApplicationContext - Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@1a33b42: startup date [Mon Jul 08 18:12:59 CST 2019]; root of context hierarchy
+2019-07-08 18:12:59.651 logback [restartedMain] DEBUG o.s.b.c.e.AnnotationConfigEmbeddedWebApplicationContext - Bean factory for org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@1a33b42: org.springframework.beans.factory.support.DefaultListableBeanFactory@14cee11: defining beans [org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,org.springframework.context.event.internalEventListenerProcessor,org.springframework.context.event.internalEventListenerFactory,angelApplication]; root of factory hierarchy

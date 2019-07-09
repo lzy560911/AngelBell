@@ -15,6 +15,7 @@ import org.springframework.boot.web.servlet.ServletRegistrationBean;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Primary;
 import org.springframework.context.annotation.PropertySource;
+import org.springframework.web.servlet.view.InternalResourceViewResolver;
 
 import com.alibaba.druid.pool.DruidDataSource;
 import com.alibaba.druid.support.http.StatViewServlet;
@@ -144,6 +145,15 @@ public class AngelApplication {
 
     public static void main(String[] args) {
         SpringApplication.run(AngelApplication.class);
+    }
+    
+    @Bean
+    public InternalResourceViewResolver setupViewResolver(){
+       InternalResourceViewResolver resolver = new InternalResourceViewResolver();
+       resolver.setPrefix("classpath:/templates/");
+       resolver.setSuffix(".html");
+       return resolver;
+
     }
     
     /*

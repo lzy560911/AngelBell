@@ -17,6 +17,7 @@ import com.alibaba.druid.proxy.jdbc.ClobProxyImpl;
  * 修改时间：2014年9月20日
  * @version
  */
+@SuppressWarnings("rawtypes")
 public class PageData extends HashMap implements Map{
 	
 	private static final long serialVersionUID = 1L;
@@ -66,7 +67,7 @@ public class PageData extends HashMap implements Map{
 	}
 	
 	public PageData() {
-		map = new HashMap();
+		map = new HashMap<Object, Object>();
 	}
 	
 	@Override
@@ -88,7 +89,6 @@ public class PageData extends HashMap implements Map{
 		return Integer.parseInt((String)get(key));
 	}
 	
-	@SuppressWarnings("unchecked")
 	@Override
 	public Object put(Object key, Object value) {
 		if(value instanceof ClobProxyImpl){ 			//读取oracle Clob类型数据

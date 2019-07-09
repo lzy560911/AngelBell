@@ -255,6 +255,7 @@ public class Tools {
 			if (file.isFile() && file.exists()) { 		// 判断文件是否存在
 				InputStreamReader read = new InputStreamReader(
 				new FileInputStream(file), encoding);	// 考虑到编码格式
+				@SuppressWarnings("resource")
 				BufferedReader bufferedReader = new BufferedReader(read);
 				String lineTxt = null;
 				while ((lineTxt = bufferedReader.readLine()) != null) {
