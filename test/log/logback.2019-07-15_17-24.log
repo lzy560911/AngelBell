@@ -1,0 +1,2 @@
+2019-07-15 17:24:59.769 logback [RMI TCP Connection(2)-192.168.0.114] INFO  o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin - Application shutdown requested.
+2019-07-15 17:24:59.770 logback [RMI TCP Connection(2)-192.168.0.114] INFO  o.s.b.c.e.AnnotationConfigEmbeddedWebApplicationContext - Closing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@1fe1fe: startup date [Mon Jul 15 17:20:07 CST 2019]; root of context hierarchy

@@ -20,6 +20,11 @@
     </script>
 </head>
 <body>
+<script type="text/javascript">
+	$(document).ready(function() {
+		$("#welcome").load("/login/welcome")
+	});
+</script>
     <!-- 顶部开始 -->
     <div class="container">
         <div class="logo"><a href="./main.html">AngelBell v2.1</a></div>
@@ -59,31 +64,23 @@
             <li>
                 <a href="javascript:;">
                     <i class="iconfont">&#xe6b8;</i>
-                    <cite>会员管理</cite>
+                    <cite>员工信息</cite>
                     <i class="iconfont nav_right">&#xe697;</i>
                 </a>
                 <ul class="sub-menu">
                     <li date-refresh="1">
-                        <a _href="member-list.html">
+                        <a _href="/teacher/list">
                             <i class="iconfont">&#xe6a7;</i>
-                            <cite>会员列表(静态表格)</cite>
-                            
+                            <cite>教师列表</cite>
                         </a>
                     </li >
                     <li>
-                        <a _href="member-list1.html">
+                        <a _href="./member-list1.html">
                             <i class="iconfont">&#xe6a7;</i>
-                            <cite>会员列表(动态表格)</cite>
+                            <cite>领导列表</cite>
                             
                         </a>
                     </li >
-                    <li date-refresh="1">
-                        <a _href="member-del.html">
-                            <i class="iconfont">&#xe6a7;</i>
-                            <cite>会员删除</cite>
-                            
-                        </a>
-                    </li>
                     <li>
                         <a href="javascript:;">
                             <i class="iconfont">&#xe70b;</i>
@@ -170,7 +167,7 @@
                 </a>
                 <ul class="sub-menu">
                     <li>
-                        <a _href="admin-list.html">
+                        <a _href="/user/list">
                             <i class="iconfont">&#xe6a7;</i>
                             <cite>管理员列表</cite>
                         </a>
@@ -308,7 +305,8 @@
           </div>
           <div class="layui-tab-content">
             <div class="layui-tab-item layui-show">
-                <iframe src='./welcome.html' frameborder="0" scrolling="yes" class="x-iframe"></iframe>
+            	<!-- <div id="welcome"></div> -->
+                <iframe src="/static/welcome.html" frameborder="0" scrolling="yes" class="x-iframe"></iframe>
             </div>
           </div>
           <div id="tab_show"></div>

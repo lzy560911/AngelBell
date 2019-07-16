@@ -1,3 +1,0 @@
-2019-07-09 17:07:09.356 logback [http-nio-8080-exec-2] INFO  c.a.oa.controller.UserController - 
-2019-07-09 17:07:09.358 logback [http-nio-8080-exec-2] INFO  c.a.oa.controller.UserController - start
-2019-07-09 17:07:09.358 logback [http-nio-8080-exec-2] INFO  c.a.oa.controller.UserController - 跳转到登录页面....

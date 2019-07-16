@@ -26,8 +26,6 @@ import cn.angelbell.oa.util.PageData;
 import cn.angelbell.oa.util.Tools;
 
 
-
-
 @Controller
 @RequestMapping(value = "/login")
 public class LoginController  extends BaseController {
@@ -40,27 +38,9 @@ public class LoginController  extends BaseController {
 	 */
 	@RequestMapping(value="/toLogin")
 	public ModelAndView login() throws Exception{
-		
-		logBefore(logger, "登录");
+		logBefore(logger, "跳转到登录页面");
 		ModelAndView mv = this.getModelAndView();
-		return mv;
-	}
-	
-	@RequestMapping(value="/head")
-	public ModelAndView lodeHead() throws Exception{
-		
-		logBefore(logger, "加载头部");
-		ModelAndView mv = this.getModelAndView();
-		mv.setViewName("jsp/head");
-		return mv;
-	}
-	
-	@RequestMapping(value="/welcome")
-	public ModelAndView lodeWelcome() throws Exception{
-		
-		logBefore(logger, "加载头部");
-		ModelAndView mv = this.getModelAndView();
-		mv.setViewName("jsp/welcome");
+		mv.setViewName("login");
 		return mv;
 	}
 	

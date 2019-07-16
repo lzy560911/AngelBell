@@ -1,4 +1,4 @@
-package cn.angelbell.oa.controller;
+package cn.angelbell.oa.shiro;
 
 import org.apache.shiro.SecurityUtils;
 import org.apache.shiro.authc.DisabledAccountException;

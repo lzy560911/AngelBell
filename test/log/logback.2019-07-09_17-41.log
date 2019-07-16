@@ -1,0 +1,6 @@
+2019-07-09 17:41:21.658 logback [http-nio-8080-exec-3] INFO  c.a.oa.controller.LoginController - 
+2019-07-09 17:41:21.659 logback [http-nio-8080-exec-3] INFO  c.a.oa.controller.LoginController - start
+2019-07-09 17:41:21.660 logback [http-nio-8080-exec-3] INFO  c.a.oa.controller.LoginController - 验证登录
+2019-07-09 17:41:22.148 logback [http-nio-8080-exec-4] INFO  c.a.oa.controller.LoginController - 
+2019-07-09 17:41:22.148 logback [http-nio-8080-exec-4] INFO  c.a.oa.controller.LoginController - start
+2019-07-09 17:41:22.148 logback [http-nio-8080-exec-4] INFO  c.a.oa.controller.LoginController - 加载欢迎页面

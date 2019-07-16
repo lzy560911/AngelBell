@@ -1,0 +1,10 @@
+2019-07-09 17:36:09.131 logback [http-nio-8080-exec-8] INFO  c.a.oa.controller.LoginController - 
+2019-07-09 17:36:09.132 logback [http-nio-8080-exec-8] INFO  c.a.oa.controller.LoginController - start
+2019-07-09 17:36:09.132 logback [http-nio-8080-exec-8] INFO  c.a.oa.controller.LoginController - 验证登录
+2019-07-09 17:36:09.729 logback [http-nio-8080-exec-3] INFO  c.a.oa.controller.LoginController - 
+2019-07-09 17:36:09.729 logback [http-nio-8080-exec-3] INFO  c.a.oa.controller.LoginController - start
+2019-07-09 17:36:09.729 logback [http-nio-8080-exec-3] INFO  c.a.oa.controller.LoginController - 加载欢迎页面
+2019-07-09 17:36:09.746 logback [http-nio-8080-exec-5] WARN  o.s.web.servlet.PageNotFound - No mapping found for HTTP request with URI [/login/css/xadmin.css] in DispatcherServlet with name 'dispatcherServlet'
+2019-07-09 17:36:09.746 logback [http-nio-8080-exec-1] WARN  o.s.web.servlet.PageNotFound - No mapping found for HTTP request with URI [/login/css/font.css] in DispatcherServlet with name 'dispatcherServlet'
+2019-07-09 17:36:22.160 logback [http-nio-8080-exec-9] WARN  o.s.web.servlet.PageNotFound - No mapping found for HTTP request with URI [/login/css/font.css] in DispatcherServlet with name 'dispatcherServlet'
+2019-07-09 17:36:22.162 logback [http-nio-8080-exec-10] WARN  o.s.web.servlet.PageNotFound - No mapping found for HTTP request with URI [/login/css/xadmin.css] in DispatcherServlet with name 'dispatcherServlet'
