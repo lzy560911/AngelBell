@@ -1,5 +1,6 @@
 package cn.angelbell.oa.entity;
 
+import java.io.Serializable;
 import java.util.Date;
 
 /**
@@ -11,8 +12,13 @@ import java.util.Date;
  *
  * @mbggenerated do_not_delete_during_merge
  */
-public class User {
+public class User implements Serializable {
     /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+
+	/**
      * Database Column Remarks:
      *   编号
      *

@@ -1,0 +1,9 @@
+2019-07-16 17:12:08.672 logback [http-nio-8080-exec-5] WARN  o.s.web.servlet.PageNotFound - No mapping found for HTTP request with URI [/login/order-list.html] in DispatcherServlet with name 'dispatcherServlet'
+2019-07-16 17:12:08.695 logback [http-nio-8080-exec-6] WARN  o.s.web.servlet.PageNotFound - No mapping found for HTTP request with URI [/login/css/font.css] in DispatcherServlet with name 'dispatcherServlet'
+2019-07-16 17:12:08.696 logback [http-nio-8080-exec-10] WARN  o.s.web.servlet.PageNotFound - No mapping found for HTTP request with URI [/login/css/xadmin.css] in DispatcherServlet with name 'dispatcherServlet'
+2019-07-16 17:12:18.410 logback [http-nio-8080-exec-8] INFO  c.a.o.controller.user.UserController - 
+2019-07-16 17:12:18.412 logback [http-nio-8080-exec-8] INFO  c.a.o.controller.user.UserController - start
+2019-07-16 17:12:18.412 logback [http-nio-8080-exec-8] INFO  c.a.o.controller.user.UserController - 获取全部用户信息
+2019-07-16 17:12:21.142 logback [http-nio-8080-exec-2] INFO  c.a.o.c.teacher.TeacherController - 
+2019-07-16 17:12:21.142 logback [http-nio-8080-exec-2] INFO  c.a.o.c.teacher.TeacherController - start
+2019-07-16 17:12:21.142 logback [http-nio-8080-exec-2] INFO  c.a.o.c.teacher.TeacherController - 获取全部教师信息

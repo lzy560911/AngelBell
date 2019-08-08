@@ -1,0 +1,12 @@
+2019-07-17 18:17:02.836 logback [http-nio-8080-exec-3] INFO  c.a.o.c.teacher.TeacherController - 
+2019-07-17 18:17:02.943 logback [http-nio-8080-exec-3] INFO  c.a.o.c.teacher.TeacherController - start
+2019-07-17 18:17:02.943 logback [http-nio-8080-exec-3] INFO  c.a.o.c.teacher.TeacherController - 获取全部教师信息
+2019-07-17 18:17:30.588 logback [http-nio-8080-exec-7] INFO  c.a.oa.controller.LoginController - 
+2019-07-17 18:17:30.588 logback [http-nio-8080-exec-7] INFO  c.a.oa.controller.LoginController - start
+2019-07-17 18:17:30.588 logback [http-nio-8080-exec-7] INFO  c.a.oa.controller.LoginController - admin退出系统
+2019-07-17 18:17:46.133 logback [http-nio-8080-exec-9] INFO  c.a.oa.controller.LoginController - 
+2019-07-17 18:17:46.134 logback [http-nio-8080-exec-9] INFO  c.a.oa.controller.LoginController - start
+2019-07-17 18:17:46.134 logback [http-nio-8080-exec-9] INFO  c.a.oa.controller.LoginController - 验证登录
+2019-07-17 18:17:46.292 logback [http-nio-8080-exec-6] INFO  c.a.o.c.teacher.TeacherController - 
+2019-07-17 18:17:46.293 logback [http-nio-8080-exec-6] INFO  c.a.o.c.teacher.TeacherController - start
+2019-07-17 18:17:46.293 logback [http-nio-8080-exec-6] INFO  c.a.o.c.teacher.TeacherController - 获取全部教师信息

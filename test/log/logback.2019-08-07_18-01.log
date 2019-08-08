@@ -1,0 +1,7 @@
+2019-08-07 18:01:06.920 logback [http-nio-8080-exec-1] WARN  o.s.web.servlet.PageNotFound - No mapping found for HTTP request with URI [/teacher/css/xadmin.css] in DispatcherServlet with name 'dispatcherServlet'
+2019-08-07 18:01:06.920 logback [http-nio-8080-exec-9] WARN  o.s.web.servlet.PageNotFound - No mapping found for HTTP request with URI [/teacher/css/font.css] in DispatcherServlet with name 'dispatcherServlet'
+2019-08-07 18:01:15.460 logback [http-nio-8080-exec-10] WARN  o.s.web.servlet.PageNotFound - No mapping found for HTTP request with URI [/login/member-list1.html] in DispatcherServlet with name 'dispatcherServlet'
+2019-08-07 18:01:15.490 logback [http-nio-8080-exec-4] WARN  o.s.web.servlet.PageNotFound - No mapping found for HTTP request with URI [/login/css/font.css] in DispatcherServlet with name 'dispatcherServlet'
+2019-08-07 18:01:15.490 logback [http-nio-8080-exec-5] WARN  o.s.web.servlet.PageNotFound - No mapping found for HTTP request with URI [/login/css/xadmin.css] in DispatcherServlet with name 'dispatcherServlet'
+2019-08-07 18:01:59.764 logback [RMI TCP Connection(2)-192.168.254.1] INFO  o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin - Application shutdown requested.
+2019-08-07 18:01:59.765 logback [RMI TCP Connection(2)-192.168.254.1] INFO  o.s.b.c.e.AnnotationConfigEmbeddedWebApplicationContext - Closing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@12cb9dc: startup date [Wed Aug 07 18:00:05 CST 2019]; root of context hierarchy

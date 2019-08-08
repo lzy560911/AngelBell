@@ -1,0 +1,6 @@
+2019-08-08 17:18:04.725 logback [http-nio-8080-exec-8] INFO  c.a.o.controller.user.UserController - 
+2019-08-08 17:18:04.726 logback [http-nio-8080-exec-8] INFO  c.a.o.controller.user.UserController - start
+2019-08-08 17:18:04.726 logback [http-nio-8080-exec-8] INFO  c.a.o.controller.user.UserController - 添加用户信息
+2019-08-08 17:18:05.862 logback [http-nio-8080-exec-9] INFO  c.a.o.controller.user.UserController - 
+2019-08-08 17:18:05.862 logback [http-nio-8080-exec-9] INFO  c.a.o.controller.user.UserController - start
+2019-08-08 17:18:05.862 logback [http-nio-8080-exec-9] INFO  c.a.o.controller.user.UserController - 获取全部用户信息

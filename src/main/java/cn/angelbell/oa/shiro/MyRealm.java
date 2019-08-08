@@ -3,6 +3,8 @@ package cn.angelbell.oa.shiro;
 import java.util.ArrayList;
 import java.util.List;
 
+import javax.annotation.Resource;
+
 import org.apache.shiro.authc.AccountException;
 import org.apache.shiro.authc.AuthenticationException;
 import org.apache.shiro.authc.AuthenticationInfo;
@@ -14,10 +16,9 @@ import org.apache.shiro.authz.SimpleAuthorizationInfo;
 import org.apache.shiro.realm.AuthorizingRealm;
 import org.apache.shiro.subject.PrincipalCollection;
 import org.apache.shiro.util.ByteSource;
-import org.springframework.beans.factory.annotation.Autowired;
 
 import cn.angelbell.oa.entity.User;
-import cn.angelbell.oa.mapper.UserMapper;
+import cn.angelbell.oa.service.user.UserService;
 
 /**
  * 
@@ -27,35 +28,39 @@ import cn.angelbell.oa.mapper.UserMapper;
  * @date 2017年10月9日 上午10:54:00
  */
 public class MyRealm extends AuthorizingRealm {
-	@Autowired
-	private UserMapper userMapper;
+	
+	@Resource
+    private UserService userService;
+
     /**
      * 用于认证
      */
     @Override
-    protected AuthenticationInfo doGetAuthenticationInfo(AuthenticationToken authenticationToken)
-            throws AuthenticationException {
-    	System.out.println("进入自定义Realm.....");
-        UsernamePasswordToken token = (UsernamePasswordToken) authenticationToken;
-        String username = String.valueOf(token.getUsername());
-        // 从数据库获取对应用户名的用户
-        User user = null;
-		try {
-			System.out.println("自定义Realm准备查找用户信息.....");
-			user = userMapper.selectByUserName(username);
+    protected AuthenticationInfo doGetAuthenticationInfo(AuthenticationToken token) throws AuthenticationException {
+        System.out.println("使用了自定义的realm,用户认证...");
+        System.out.println("用户名:" + ((UsernamePasswordToken) token).getUsername());
+        System.out.println("密码:" + new String(((UsernamePasswordToken) token).getPassword()));
+
+        // 获取用户名
+        String userName = (String) token.getPrincipal();
+        User userInfo = null;
+        try {
+            userInfo = userService.selectByUserName(userName);
+           
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-        if (user == null) {
-            throw new AccountException("不存在此用户");
-        }
-        // 获取盐值，即用户名
-        ByteSource salt = ByteSource.Util.bytes(username);
-        System.out.println("salt is -->"+salt);
-        //注意，数据库中的user的密码必须是要经过md5加密，不然还是会抛出异常！！！！！
-        System.out.println("自定义Realm结束.....");
-        return new SimpleAuthenticationInfo(user.getUsername(), user.getPassword(), salt, getName());
+        if(userInfo != null){
+			String password = userInfo.getPassword();
+	        ByteSource salt = ByteSource.Util.bytes(userInfo.getSalt());
+	        System.out.println(password+":"+salt);
+	        // 与UsernamePasswordToken(userName, password)进行比较
+	        // 区别UsernamePasswordToken(userName, password)中的password是用户输入的密码，即没有加密过的密码
+	        // SimpleAuthenticationInfo(userName, password, ByteSource.Util.bytes(salt), this.getName())中的password是数据库中的密码，即加密过后的密码
+	        return new SimpleAuthenticationInfo(userName, password, salt, this.getName());
+		}
+		return null;
     }
 
     /**

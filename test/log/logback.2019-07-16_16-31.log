@@ -1,6 +1,0 @@
-2019-07-16 16:31:48.488 logback [http-nio-8080-exec-8] INFO  c.a.oa.controller.TeacherController - 
-2019-07-16 16:31:48.489 logback [http-nio-8080-exec-8] INFO  c.a.oa.controller.TeacherController - start
-2019-07-16 16:31:48.489 logback [http-nio-8080-exec-8] INFO  c.a.oa.controller.TeacherController - 获取全部教师信息
-2019-07-16 16:31:57.922 logback [http-nio-8080-exec-4] INFO  c.a.oa.controller.TeacherController - 
-2019-07-16 16:31:57.923 logback [http-nio-8080-exec-4] INFO  c.a.oa.controller.TeacherController - start
-2019-07-16 16:31:57.923 logback [http-nio-8080-exec-4] INFO  c.a.oa.controller.TeacherController - 获取全部教师信息

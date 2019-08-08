@@ -1,6 +1,9 @@
-2019-07-16 16:32:23.503 logback [http-nio-8080-exec-2] INFO  c.a.oa.controller.TeacherController - 
-2019-07-16 16:32:23.505 logback [http-nio-8080-exec-2] INFO  c.a.oa.controller.TeacherController - start
-2019-07-16 16:32:23.505 logback [http-nio-8080-exec-2] INFO  c.a.oa.controller.TeacherController - 获取全部教师信息
-2019-07-16 16:32:33.880 logback [http-nio-8080-exec-10] WARN  o.s.web.servlet.PageNotFound - No mapping found for HTTP request with URI [/teacher/member-add.html] in DispatcherServlet with name 'dispatcherServlet'
-2019-07-16 16:32:33.895 logback [http-nio-8080-exec-7] WARN  o.s.web.servlet.PageNotFound - No mapping found for HTTP request with URI [/teacher/css/xadmin.css] in DispatcherServlet with name 'dispatcherServlet'
-2019-07-16 16:32:33.895 logback [http-nio-8080-exec-9] WARN  o.s.web.servlet.PageNotFound - No mapping found for HTTP request with URI [/teacher/css/font.css] in DispatcherServlet with name 'dispatcherServlet'
+2019-08-08 17:20:03.242 logback [http-nio-8080-exec-1] INFO  c.a.o.c.user.LoginController - 
+2019-08-08 17:20:03.242 logback [http-nio-8080-exec-1] INFO  c.a.o.c.user.LoginController - start
+2019-08-08 17:20:03.242 logback [http-nio-8080-exec-1] INFO  c.a.o.c.user.LoginController - 跳转到登录页面
+2019-08-08 17:20:12.537 logback [http-nio-8080-exec-3] INFO  c.a.o.c.user.LoginController - 
+2019-08-08 17:20:12.537 logback [http-nio-8080-exec-3] INFO  c.a.o.c.user.LoginController - start
+2019-08-08 17:20:12.537 logback [http-nio-8080-exec-3] INFO  c.a.o.c.user.LoginController - 登录验证
+2019-08-08 17:20:12.699 logback [http-nio-8080-exec-6] INFO  c.a.o.controller.user.UserController - 
+2019-08-08 17:20:12.700 logback [http-nio-8080-exec-6] INFO  c.a.o.controller.user.UserController - start
+2019-08-08 17:20:12.700 logback [http-nio-8080-exec-6] INFO  c.a.o.controller.user.UserController - 获取全部用户信息

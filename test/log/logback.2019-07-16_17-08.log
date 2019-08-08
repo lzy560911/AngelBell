@@ -1,0 +1,3 @@
+2019-07-16 17:08:56.114 logback [http-nio-8080-exec-9] INFO  c.a.o.c.teacher.TeacherController - 
+2019-07-16 17:08:56.222 logback [http-nio-8080-exec-9] INFO  c.a.o.c.teacher.TeacherController - start
+2019-07-16 17:08:56.222 logback [http-nio-8080-exec-9] INFO  c.a.o.c.teacher.TeacherController - 获取全部教师信息

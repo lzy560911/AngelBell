@@ -1,0 +1,36 @@
+2019-08-07 17:50:00.329 logback [restartedMain] DEBUG o.s.b.c.e.AnnotationConfigEmbeddedWebApplicationContext - Unable to locate MessageSource with name 'messageSource': using default [org.springframework.context.support.DelegatingMessageSource@4d80c3]
+2019-08-07 17:50:00.330 logback [restartedMain] DEBUG o.s.b.c.e.AnnotationConfigEmbeddedWebApplicationContext - Unable to locate ApplicationEventMulticaster with name 'applicationEventMulticaster': using default [org.springframework.context.event.SimpleApplicationEventMulticaster@11b45a4]
+2019-08-07 17:50:00.510 logback [restartedMain] DEBUG o.s.b.c.e.t.TomcatEmbeddedServletContainerFactory - Code archive: D:\maven3.6\apache-maven-3.6.1-bin\maven-repository\org\springframework\boot\spring-boot\1.5.6.RELEASE\spring-boot-1.5.6.RELEASE.jar
+2019-08-07 17:50:00.511 logback [restartedMain] DEBUG o.s.b.c.e.t.TomcatEmbeddedServletContainerFactory - Code archive: D:\maven3.6\apache-maven-3.6.1-bin\maven-repository\org\springframework\boot\spring-boot\1.5.6.RELEASE\spring-boot-1.5.6.RELEASE.jar
+2019-08-07 17:50:00.511 logback [restartedMain] DEBUG o.s.b.c.e.t.TomcatEmbeddedServletContainerFactory - Document root: D:\myeclipse_2017\myeclipse_code\oa\src\main\webapp
+2019-08-07 17:50:00.559 logback [restartedMain] INFO  o.s.b.c.e.t.TomcatEmbeddedServletContainer - Tomcat initialized with port(s): 8080 (http)
+2019-08-07 17:50:00.634 logback [localhost-startStop-1] INFO  cn.angelbell.oa.config.FilterConfig - 注册过滤器, 过滤器name: KeywordHandleFilter, 过滤器order: 3, 过滤器过滤url: [/]
+2019-08-07 17:50:00.722 logback [localhost-startStop-1] DEBUG o.s.b.w.s.ServletContextInitializerBeans - Added existing Filter initializer bean 'registerKeywordHandleFilter'; order=3, resource=class path resource [cn/angelbell/oa/config/FilterConfig.class]
+2019-08-07 17:50:00.722 logback [localhost-startStop-1] DEBUG o.s.b.w.s.ServletContextInitializerBeans - Added existing Servlet initializer bean 'druidServlet'; order=2147483647, resource=cn.angelbell.oa.AngelApplication
+2019-08-07 17:50:00.722 logback [localhost-startStop-1] DEBUG o.s.b.w.s.ServletContextInitializerBeans - Added existing Filter initializer bean 'filterRegistrationBean'; order=2147483647, resource=cn.angelbell.oa.AngelApplication
+2019-08-07 17:50:00.722 logback [localhost-startStop-1] DEBUG o.s.b.w.s.ServletContextInitializerBeans - Added existing Servlet initializer bean 'dispatcherServletRegistration'; order=2147483647, resource=class path resource [org/springframework/boot/autoconfigure/web/DispatcherServletAutoConfiguration$DispatcherServletRegistrationConfiguration.class]
+2019-08-07 17:50:00.749 logback [localhost-startStop-1] DEBUG o.s.b.w.s.ServletContextInitializerBeans - Created Filter initializer for bean 'characterEncodingFilter'; order=-2147483648, resource=class path resource [org/springframework/boot/autoconfigure/web/HttpEncodingAutoConfiguration.class]
+2019-08-07 17:50:00.749 logback [localhost-startStop-1] DEBUG o.s.b.w.s.ServletContextInitializerBeans - Created Filter initializer for bean 'myFilter'; order=2147483647, resource=file [D:\myeclipse_2017\myeclipse_code\oa\target\classes\cn\angelbell\oa\filter\MyFilter.class]
+2019-08-07 17:50:00.749 logback [localhost-startStop-1] DEBUG o.s.b.w.s.ServletContextInitializerBeans - Created Filter initializer for bean 'shirFilter'; order=2147483647, resource=class path resource [cn/angelbell/oa/shiro/ShiroConfig.class]
+2019-08-07 17:50:00.754 logback [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'characterEncodingFilter' to: [/*]
+2019-08-07 17:50:00.755 logback [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'KeywordHandleFilter' to urls: [/]
+2019-08-07 17:50:00.755 logback [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'webStatFilter' to urls: [/*]
+2019-08-07 17:50:00.755 logback [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'myFilter' to: [/*]
+2019-08-07 17:50:00.755 logback [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'shirFilter' to: [/*]
+2019-08-07 17:50:00.755 logback [localhost-startStop-1] INFO  o.s.b.w.s.ServletRegistrationBean - Mapping servlet: 'statViewServlet' to [/druid/*]
+2019-08-07 17:50:00.756 logback [localhost-startStop-1] INFO  o.s.b.w.s.ServletRegistrationBean - Mapping servlet: 'dispatcherServlet' to [/]
+2019-08-07 17:50:00.780 logback [localhost-startStop-1] INFO  c.a.oa.filter.KeywordHandleFilter - KeywordHandleFilter初始化
+2019-08-07 17:50:00.780 logback [localhost-startStop-1] DEBUG o.s.b.w.f.OrderedCharacterEncodingFilter - Initializing filter 'characterEncodingFilter'
+2019-08-07 17:50:00.780 logback [localhost-startStop-1] DEBUG o.s.b.w.f.OrderedCharacterEncodingFilter - Filter 'characterEncodingFilter' configured successfully
+2019-08-07 17:50:00.976 logback [restartedMain] INFO  cn.angelbell.oa.config.WebConfig - 配置静态资源所在目录
+2019-08-07 17:50:01.311 logback [restartedMain] DEBUG o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin - Application Admin MBean registered with name 'org.springframework.boot:type=Admin,name=SpringApplication'
+2019-08-07 17:50:01.645 logback [restartedMain] WARN  o.t.templatemode.TemplateMode - [THYMELEAF][restartedMain] Template Mode 'LEGACYHTML5' is deprecated. Using Template Mode 'HTML' instead.
+2019-08-07 17:50:01.782 logback [restartedMain] DEBUG o.s.b.d.livereload.LiveReloadServer - Starting live reload server on port 35729
+2019-08-07 17:50:01.784 logback [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2019-08-07 17:50:01.827 logback [restartedMain] DEBUG o.s.b.c.e.AnnotationConfigEmbeddedWebApplicationContext - Unable to locate LifecycleProcessor with name 'lifecycleProcessor': using default [org.springframework.context.support.DefaultLifecycleProcessor@1e17c51]
+2019-08-07 17:50:01.862 logback [restartedMain] INFO  o.s.b.c.e.t.TomcatEmbeddedServletContainer - Tomcat started on port(s): 8080 (http)
+2019-08-07 17:50:01.864 logback [restartedMain] DEBUG o.s.boot.devtools.restart.Restarter - Creating new Restarter for thread Thread[main,5,main]
+2019-08-07 17:50:01.864 logback [restartedMain] DEBUG o.s.boot.devtools.restart.Restarter - Immediately restarting application
+2019-08-07 17:50:01.864 logback [restartedMain] DEBUG o.s.boot.devtools.restart.Restarter - Created RestartClassLoader org.springframework.boot.devtools.restart.classloader.RestartClassLoader@9ed6e4
+2019-08-07 17:50:01.864 logback [restartedMain] DEBUG o.s.boot.devtools.restart.Restarter - Starting application cn.angelbell.oa.AngelApplication with URLs [file:/D:/myeclipse_2017/myeclipse_code/oa/target/classes/]
+2019-08-07 17:50:01.865 logback [restartedMain] INFO  cn.angelbell.oa.AngelApplication - Started AngelApplication in 4.365 seconds (JVM running for 5.36)
